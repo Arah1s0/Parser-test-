@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Коин-кликер</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+    }
+    #coin-count {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Коин-кликер</h1>
+  <div id="coin-count">0.000</div>
+  <button onclick="addCoin()">Нажми, чтобы заработать!</button>
+
+  <script>
+    let coinCount = 0;
+
+    function addCoin() {
+      coinCount += 0.001;
+      document.getElementById("coin-count").textContent = coinCount.toFixed(3);
+    }
+  </script>
+</body>
+</html>
+ 
